@@ -1,5 +1,4 @@
-Angelo - (Repeatable) Mocha Test Runner
-===========
+### Angelo - (Repeatable) Mocha Test Runner
 
 ## Awesome features!
 
