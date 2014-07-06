@@ -2,7 +2,7 @@
 
 ###   Awesome features!
 
-- Useful for being able to run (and re-run!) your mocha test suites
+- Useful for running (and re-running!) mocha test suites.
 
 - Simple API. Load and play -- that's all you need to know!
 
