@@ -1,6 +1,6 @@
-### Angelo - (Repeatable) Mocha Test Runner
+## Angelo - (Repeatable) Mocha Test Runner
 
-## Awesome features!
+###   Awesome features!
 
 - Useful for being able to run (and re-run!) your mocha test suites
 
@@ -9,39 +9,36 @@
 - Open source. (MIT License)
 
 
-## Install
+### Install
 
-### Local
+#### Local
 
     npm install angelo
 
-### Everywhere
+#### Everywhere
 
     npm install -g angelo
 
-## Example usage
+### Example usage
 
-### As a Library
-
-#### Default
+#### As a Library
  
     Angelo = require('angelo').Angelo
     var angelo = new Angelo()
     angelo.load("/path/to/workflows/playlist.js")
     angelo.play()
 
-
-### From the Command Line
+#### From the Command Line
 
       angelo /path/to/workflows/playlist.js
 
-## FAQ
+### FAQ
 
-### Why "Angelo"?
+#### Why "Angelo"?
 
 [Angelo Moriondo](http://en.wikipedia.org/wiki/Angelo_Moriondo) invented one of the first espresso machines.
 
-### Okay, but why use this library?
+#### Okay, but why use this library?
 
 You might like Angelo if:
 
