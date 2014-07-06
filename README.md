@@ -1,10 +1,8 @@
-## Angelo - (Repeatable) Mocha Test Runner
+## Angelo - A (rerunnable) Mocha test runner
 
-- Useful for running (and re-running!) mocha test suites.
+- Useful for running (and rerunning!) Mocha test suites.
 
 - Simple API. Load and play -- that's all you need to know!
-
-- Open source. (MIT License)
 
 
 ### Install
@@ -32,16 +30,16 @@ You might like Angelo if:
 
   **and**
   
-  2) You want [re-run a test suite multiple times.](https://github.com/visionmedia/mocha/issues/736).
+  2) You want [rerun a test suite multiple times](https://github.com/visionmedia/mocha/issues/736).
 
 [TJ says it best:](https://github.com/visionmedia/mocha/pull/977#issuecomment-24460957):
 
-    "IMO this should be done with complete process isolation, you could use json-stream or the json reporter and exec(), plus then that keeps mocha lighter. win-win situation :D" - TJ 
+    "IMO this should be done with complete process isolation, you could use 
+    json-stream or the json reporter and exec(), plus then that keeps mocha 
+    lighter. win-win situation :D" - TJ 
 
-That's exactly what Angelo does! :-)
+And that's exactly what Angelo does!
 
-Detail:
+Mocha has an issue with re-running test suites within the same process. This is because Mocha uses a call to `require` to load test files. When `require` is called, however, files are cached and only loaded once. A side-effect of this reliance on `require` is that tests are only ever run once. 
 
-Mocha has an issue with re-running test suites within the same process. This is because Mocha uses a call to "require()" to load test files. When require() is called, however, files are cached and only loaded once. A side-effect of this reliance on require() is that tests are only ever run once. 
-
-As a workaround, you could clear the cache before re-loading, but this isn't foolproof. Instead, Angelo does what TJ recommends -- it run Mocha in a child process and receives results via the JSON stream reporter.
+As a workaround, you could [clear the cache](https://github.com/visionmedia/mocha/pull/266#issuecomment-11794765) of loaded modules before reloading, but this isn't foolproof. Instead, Angelo does what TJ recommends -- it runs Mocha in a child process and receives results via the JSON stream reporter.
