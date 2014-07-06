@@ -11,26 +11,14 @@
 
 ### Install
 
-#### Local
-
     npm install angelo
 
-#### Everywhere
-
-    npm install -g angelo
-
 ### Example usage
-
-#### As a Library
  
     Angelo = require('angelo').Angelo
-    var angelo = new Angelo()
+    angelo = new Angelo()
     angelo.load("/path/to/test.js")
     angelo.play()
-
-#### From the Command Line
-
-    $ angelo /path/to/test.js
 
 ### FAQ
 
