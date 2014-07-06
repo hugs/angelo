@@ -1,6 +1,6 @@
 {
   "name": "angelo",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "(Repeatable) Mocha Test Runner",
   "author": "Jason Huggins <jrhuggins@gmail.com>",
   "keywords": ["mocha", "test", "testing", "automation", "angelo", "moriondo"],
