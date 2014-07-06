@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+path = require('path')
+fs = require('fs')
+processArgs = require('./process_arguments')
+
+fileArg = processArgs()
+
+bin_full_path = fs.realpathSync(__filename)
+bin_dir = path.dirname(bin_full_path)
+lib_dir = path.join(bin_dir, '../lib')
+lib = path.join(lib_dir, 'angelo.js')
+
+angelo = require(lib)
+var a = new angelo.Angelo( {filePath:fileArg} )
+setTimeout(function(){ a.play() } , 1000)  

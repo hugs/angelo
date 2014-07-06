@@ -1,0 +1,31 @@
+{
+  "name": "angelo",
+  "version": "0.0.1",
+  "description": "(Repeatable) Mocha Test Runner",
+  "author": "Jason Huggins <jrhuggins@gmail.com>",
+  "keywords": ["mocha", "test", "testing", "automation", "angelo", "moriondo"],
+  "homepage": "https://github.com/hugs/angelo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hugs/angelo.git"
+  },
+  "main": "./lib/angelo.js",
+  "bin": {
+    "angelo": "./bin/angelo"
+  },  
+  "engines": {
+      "node":"*"
+  },
+  "bugs": {
+    "url" : "https://github.com/hugs/angelo/issues"
+  },
+  "license": "MIT", 
+  "dependencies": {
+    "better-assert": "*",    
+    "coffee-script": "1.7.x",    
+    "minimist": "0.1.x",
+    "mocha": "1.20.x",    
+    "node-uuid": "^1.4.1",
+    "stack-trace": "*"    
+  }
+}
