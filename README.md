@@ -36,7 +36,7 @@
 
 #### Why "Angelo"?
 
-[Angelo Moriondo](http://en.wikipedia.org/wiki/Angelo_Moriondo) is the inventor of one of the first espresso machines.
+[Angelo Moriondo](http://en.wikipedia.org/wiki/Angelo_Moriondo) is the inventor of the first espresso machine.
 
 #### Okay, but why use this library?
 
