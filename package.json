@@ -1,7 +1,7 @@
 {
   "name": "angelo",
-  "version": "0.0.9",
-  "description": "A (repeatable) Mocha test runner",
+  "version": "0.0.10",
+  "description": "A (rerunnable) Mocha test runner",
   "author": "Jason Huggins <jrhuggins@gmail.com>",
   "keywords": [
     "mocha",
