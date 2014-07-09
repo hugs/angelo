@@ -1,6 +1,6 @@
 {
   "name": "angelo",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A (rerunnable) Mocha test runner",
   "author": {
     "name": "Jason Huggins",
