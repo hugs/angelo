@@ -15,8 +15,20 @@ var processArgs = function() {
     console.log("\nUsage: angelo <file>\n");
     process.exit(1);
   }
+  
+  var filePath = fileArg[0];
+  
+  var verbose = false;
+  if (argv.hasOwnProperty('verbose')) {
+    verbose = true;
+  }
 
-  return fileArg[0];
+  var args = {
+    filePath: filePath,
+    verbose: verbose
+  }
+
+  return args;
 };
 
 module.exports = processArgs;
