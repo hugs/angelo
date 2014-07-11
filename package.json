@@ -37,6 +37,9 @@
     "minimist": "0.1.x",
     "mocha": "1.20.x",
     "node-uuid": "^1.4.1",
-    "stack-trace": "*"
+    "stack-trace": "*",
+    "cabbie": "*",
+    "chromedriver": "*",
+    "teddybear": "*"
   }
 }
