@@ -22,10 +22,11 @@ var processArgs = function() {
   if (argv.hasOwnProperty('verbose')) {
     verbose = true;
   }
-
+  
   var args = {
     filePath: filePath,
-    verbose: verbose
+    verbose: verbose,
+    nodeBinary: process.execPath
   }
 
   return args;
