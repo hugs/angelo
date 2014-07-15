@@ -15,18 +15,24 @@ var processArgs = function() {
     console.log("\nUsage: angelo <file>\n");
     process.exit(1);
   }
-  
+
   var filePath = fileArg[0];
-  
+
   var verbose = false;
   if (argv.hasOwnProperty('verbose')) {
     verbose = true;
   }
-  
+
+  var reporter = 'emoticon';
+  if (argv.hasOwnProperty('reporter')) {
+    reporter = argv.reporter;
+  }
+
   var args = {
     filePath: filePath,
-    verbose: verbose,
-    nodeBinary: process.execPath
+    nodeBinary: process.execPath,
+    reporter: reporter,
+    verbose: verbose
   }
 
   return args;
