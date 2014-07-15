@@ -45,3 +45,5 @@ Mocha has an issue with re-running test suites within the same process. This is 
 As a workaround, you could [clear the cache](https://github.com/visionmedia/mocha/pull/266#issuecomment-11794765) of loaded modules before reloading, but this isn't foolproof. Instead, Angelo does what TJ recommends -- it runs Mocha in a child process and receives results via the JSON stream reporter.
 
 Angelo uses `spawn`, instead of `exec`, so that results can be streamed as they happen. Using `exec` would buffer all results until all the tests were completed.
+
+Lasly, another benefit of Angelo is the ability to run tests in parallel.  Now that test execution is running in a separate child process, you can run multiple test files in parallel by creating multiple Angelo objects.
