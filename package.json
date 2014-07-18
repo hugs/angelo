@@ -38,7 +38,7 @@
     "mocha": "1.20.x",
     "node-uuid": "^1.4.1",
     "stack-trace": "*",
-    "cabbie": "*",
+    "cabbie": "git+https://github.com/hugs/cabbie.git#671e79ee26",
     "chromedriver": "*",
     "teddybear": "*"
   }
