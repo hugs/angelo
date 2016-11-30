@@ -1,5 +1,5 @@
-var getBrowser = require('cabbie');
-var teddybear = require('teddybear');
+var cabbie = require('cabbie');
+var sleep = require('sleep');
 var childProcess = require('child_process');
 var chromeDriverWrapper = require('chromedriver');
 var binPath = chromeDriverWrapper.path;
@@ -7,7 +7,7 @@ var childArgs = [
   'test-type',
 ];
 
-SLEEP = 1000
+SLEEP = 1
 
 module.exports = function(){
   beforeEach(function(){
@@ -18,34 +18,38 @@ module.exports = function(){
     console.log('PID: ' + child.pid)
   
     console.log('beforeEach...')
-    console.log('Sleeping for ' + SLEEP / 1000 + ' seconds...');
-    teddybear(SLEEP);  
+    console.log('Sleeping for ' + SLEEP + ' seconds...');
+    sleep.sleep(SLEEP);
     console.log('Done sleeping...')  
   
     console.log("Launching browser...")
     var chromeOptions = {'args':['test-type']};
     var capabilities = {chromeOptions:chromeOptions};
-    browser = getBrowser('http://127.0.0.1:9515/',
+
+    driver = cabbie('http://127.0.0.1:9515/', 
       capabilities, 
-      { mode: 'sync', debug: false }
+      {mode: cabbie.Driver.MODE_SYNC}
     );
+    browser = driver.browser();
+    activeWindow = browser.activeWindow();
   
     open = function(url) {
-      browser.navigateTo(url);
+      activeWindow.navigator().setUrl(url);
     }
     
   })
 
   afterEach(function(){
-    console.log('Sleeping for ' + SLEEP / 1000 + ' seconds...');
-    teddybear(SLEEP);  
+    console.log('Sleeping for ' + SLEEP + ' seconds...');
+    sleep.sleep(SLEEP);
     console.log('Done sleeping...'); 
     
     console.log("Stopping browser ...")
-    browser.dispose()
+    activeWindow.close();
+    driver.dispose();
   
-    console.log('Sleeping for ' + SLEEP / 1000 + ' seconds...');
-    teddybear(SLEEP);  
+    console.log('Sleeping for ' + SLEEP + ' seconds...');
+    sleep.sleep(SLEEP);
     console.log('Done sleeping...');  
   
     console.log('afterEach...');  
