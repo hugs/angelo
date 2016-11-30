@@ -31,15 +31,15 @@
   },
   "license": "MIT",
   "dependencies": {
-    "actorify": "^1.0.0",
+    "actorify": "*",
     "better-assert": "*",
-    "coffee-script": "1.7.x",
-    "minimist": "0.1.x",
-    "mocha": "1.20.x",
-    "node-uuid": "^1.4.1",
+    "coffee-script": "*",
+    "minimist": "*",
+    "mocha": "*",
+    "uuid": "*",
     "stack-trace": "*",
-    "cabbie": "git+https://github.com/hugs/cabbie.git#671e79ee26",
+    "cabbie": "*",
     "chromedriver": "*",
-    "teddybear": "*"
+    "sleep": "*"
   }
 }
